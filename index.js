@@ -30,6 +30,7 @@
       Z: "M",
     };
 
+    document.getElementById("cipher").value = "";
     return document.querySelector(".cipher").innerText = str
       .split("")
       .map((letter) =>
