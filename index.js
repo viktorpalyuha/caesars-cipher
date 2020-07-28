@@ -33,7 +33,7 @@
     return document.querySelector(".cipher").innerText = str
       .split("")
       .map((letter) =>
-        /[A-Za-z]/.test(letter) ? rot13[letter] : letter === " " ? " " : letter
+        /[A-Z]/.test(letter) ? rot13[letter] : /[a-z]/.test(letter) ? rot13[letter.toUpperCase()].toLowerCase() : letter === " " ? " " : letter
       )
       .join("");
   }
